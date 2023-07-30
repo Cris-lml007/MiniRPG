@@ -1,11 +1,11 @@
 extends Area2D
 
-export(PackedScene) var new_scene
+#export(PackedScene)
+#var new_scene
 
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
-		if get_overlapping_bodies().size() >0:
-			next_level()
+		next_level(get_meta("miniGame"))
 			
-func next_level():
-	var PTS = get_tree().change_scene_to(new_scene)
+func next_level(scene):
+	get_tree().change_scene_to_file(scene)

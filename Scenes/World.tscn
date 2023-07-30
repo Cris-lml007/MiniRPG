@@ -388,6 +388,7 @@ limit_bottom = 207
 
 [node name="cavedoor" type="Area2D" parent="."]
 script = ExtResource("3_lvbw7")
+metadata/miniGame = &"res://Scenes/player.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cavedoor"]
 position = Vector2(136, 102)
